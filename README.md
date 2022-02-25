@@ -54,24 +54,24 @@ Items can be gained from activities or bought from the shop.
 ## Activities
 
 - Play
-  - - Happiness
-  - - Hunger
+  - \+ Happiness
+  - \- Hunger
 - Hunt
-  - - Happiness
-  - - Max Health
-  - - Max Strength
-  - - Health
-  - - Strength
-  - - Hunger
+  - \+ Happiness
+  - \+ Max Health
+  - \+ Max Strength
+  - \- Health
+  - \- Strength
+  - \- Hunger
 - Fish
-  - - Happiness
-  - - Max Strength
-  - - Strength
-  - - Hunger
+  - \+ Happiness
+  - \+ Max Strength
+  - \- Strength
+  - \- Hunger
 - Cook
-  - - Happiness
+  - \+ Happiness
 - Clean
-  - - Happiness
+  - \+ Happiness
 - Feed
-  - - Happiness
-  - - Hunger
+  - \+ Happiness
+  - \+ Hunger
