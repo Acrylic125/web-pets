@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web Pets
 
-## Getting Started
+Web pets are your just like any other real life pet.
 
-First, run the development server:
+## Stats
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+4 main pet stats,
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Health
+   The current health of the pet. The lower the pet health, the lower the pet's happiness. Once the pet's health reaches 0, the pet will not do anything until it regain back some of it's health. One way to regain health is for the pet to rest.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. Hunger
+   The current hunger of the pet. The lower the pet's hunger, the faster the pet's health gets depleted.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Happiness
+   The current emotional state of the pet. The lower the pet's happiness, the lesser the experience the pet will gain, the more likely the pet will not comply to actions.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Strength
+   The current strength of the pet. This stat dictates how efficiently the pet does certain tasks.
 
-## Learn More
+## Houses
 
-To learn more about Next.js, take a look at the following resources:
+Pets are apart of 3 Houses. The pet owner can select when which house the pet belongs to when the owner creates the pet.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. House of War
+   Harder to train but low maintainance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   - Required to do at least 1 fighting activity every day otherwise lose happiness.
+   - Higher penalties for doing something that the pet is not interested in.
+   - Higher Strength, and Max Health
 
-## Deploy on Vercel
+1. House of Fun
+   Easy to train but high maintainance.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   - Required to play at least once every day otherwise lose happiness.
+   - Higher chance to find a suitable lover match especially one from the same house.
+   - Higher penealties for being rejected by a lover.
+   - Lose hunger at a faster rate.
+   - Requires a toy or a lover at all times otherwise lose happiness.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. House of Wisdom
+   Easy to level up but requires a greater understanding of the pet.
+
+   - The happier the pet, the higher the experience gain.
+   - Quickly lose interest.
+   - Low strength and max health.
+
+## Items
+
+Items are stored in the owner's inventory.
+
+Items can be gained from activities or bought from the shop.
+
+## Activities
+
+- Play
+  - - Happiness
+  - - Hunger
+- Hunt
+  - - Happiness
+  - - Max Health
+  - - Max Strength
+  - - Health
+  - - Strength
+  - - Hunger
+- Fish
+  - - Happiness
+  - - Max Strength
+  - - Strength
+  - - Hunger
+- Cook
+  - - Happiness
+- Clean
+  - - Happiness
+- Feed
+  - - Happiness
+  - - Hunger
