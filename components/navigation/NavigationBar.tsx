@@ -27,6 +27,34 @@ function NavigationBarItem({
   );
 }
 
+interface NavigationBarUserIconProps {
+  linkProps: LinkProps;
+  image: string;
+  width?: number | string;
+  height?: number | string;
+}
+
+function NavigationBarUserIcon({
+  linkProps,
+  image,
+  width,
+  height,
+}: NavigationBarUserIconProps) {
+  return (
+    <Link {...linkProps}>
+      <a className="bg-red-500">
+        <img
+          src={image}
+          alt="No Image"
+          className="rounded-full"
+          width={width}
+          height={height}
+        />
+      </a>
+    </Link>
+  );
+}
+
 export type NavigationBarPage = "My Pets" | "Pet Shop" | "About";
 
 export interface NavigationBarProps {
@@ -36,27 +64,37 @@ export interface NavigationBarProps {
 export default function NavigationBar({ selectedPage }: NavigationBarProps) {
   return (
     <nav className="bg-gray-900 flex flex-row px-3">
-      <NavigationBarItem
-        linkProps={{
-          href: "/pet",
-        }}
-        name="My Pets"
-        selected={selectedPage === "My Pets"}
-      />
-      <NavigationBarItem
-        linkProps={{
-          href: "/pet",
-        }}
-        name="Pet Shop"
-        selected={selectedPage === "Pet Shop"}
-      />
-      <NavigationBarItem
-        linkProps={{
-          href: "/pet",
-        }}
-        name="About"
-        selected={selectedPage === "About"}
-      />
+      <span>
+        <NavigationBarItem
+          linkProps={{
+            href: "/pet",
+          }}
+          name="My Pets"
+          selected={selectedPage === "My Pets"}
+        />
+        <NavigationBarItem
+          linkProps={{
+            href: "/pet",
+          }}
+          name="Pet Shop"
+          selected={selectedPage === "Pet Shop"}
+        />
+        <NavigationBarItem
+          linkProps={{
+            href: "/pet",
+          }}
+          name="About"
+          selected={selectedPage === "About"}
+        />
+      </span>
+      <span>
+        <NavigationBarUserIcon
+          linkProps={{
+            href: "",
+          }}
+          image="https://static.wikia.nocookie.net/muc/images/4/4f/Karen.jpg/revision/latest/scale-to-width-down/248?cb=20200810021525"
+        />
+      </span>
     </nav>
   );
 }
