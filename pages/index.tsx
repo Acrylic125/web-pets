@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <>
       <PageHead title="Home" />
-      <NavigationBar />
+      <NavigationBar selectedPage="My Pets" />
     </>
   );
 };
