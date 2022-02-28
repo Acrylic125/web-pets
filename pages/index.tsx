@@ -9,7 +9,13 @@ const Home: NextPage = () => {
   return (
     <>
       <PageHead title="Home" />
-      <NavigationBar selectedPage="My Pets" />
+      <div className="bg-sky-50 w-full h-screen flex flex-col">
+        <NavigationBar selectedPage="My Pets" />
+        <div className="flex flex-1 flex-col md:flex-row">
+          <section className="flex-1"></section>
+          <aside className="bg-gray-800 w-full md:w-1/5 h-full overflow-y-scroll"></aside>
+        </div>
+      </div>
     </>
   );
 };

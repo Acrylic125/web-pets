@@ -5,7 +5,12 @@ export default function PetPage() {
   return (
     <>
       <PageHead title="Home" />
-      <NavigationBar selectedPage="My Pets" />
+      <div className="w-full h-full">
+        <NavigationBar selectedPage="My Pets" />
+        <div>
+          <aside></aside>
+        </div>
+      </div>
     </>
   );
 }
