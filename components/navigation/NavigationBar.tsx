@@ -14,16 +14,26 @@ function NavigationBarItem({
   linkProps,
 }: NavigationBarItemProps) {
   return (
-    <Link {...linkProps}>
-      <a
-        className={cx("font-light", "p-3", "text-xs", "text-white", {
+    <div
+      className={cx(
+        "transition",
+        "ease-in-out",
+        "duration-150",
+        "hover:bg-slate-700",
+        "p-3",
+        "font-light",
+        "text-xs",
+        "text-white",
+        {
           "border-b-4": selected,
           "border-sky-500": selected,
-        })}
-      >
-        {name}
-      </a>
-    </Link>
+        }
+      )}
+    >
+      <Link {...linkProps}>
+        <a>{name}</a>
+      </Link>
+    </div>
   );
 }
 
@@ -42,11 +52,11 @@ function NavigationBarUserIcon({
 }: NavigationBarUserIconProps) {
   return (
     <Link {...linkProps}>
-      <a className="bg-red-500">
+      <a>
         <img
           src={image}
           alt="No Image"
-          className="rounded-full"
+          className="relative top-1/2 -translate-y-1/2 rounded-full aspect-square bg-cover"
           width={width}
           height={height}
         />
@@ -63,8 +73,8 @@ export interface NavigationBarProps {
 
 export default function NavigationBar({ selectedPage }: NavigationBarProps) {
   return (
-    <nav className="bg-gray-900 flex flex-row px-3">
-      <span>
+    <nav className="bg-gray-900 flex flex-row px-3 justify-between">
+      <div className="flex flex-row h-fit">
         <NavigationBarItem
           linkProps={{
             href: "/pet",
@@ -86,15 +96,16 @@ export default function NavigationBar({ selectedPage }: NavigationBarProps) {
           name="About"
           selected={selectedPage === "About"}
         />
-      </span>
-      <span>
+      </div>
+      <div>
         <NavigationBarUserIcon
           linkProps={{
             href: "",
           }}
-          image="https://static.wikia.nocookie.net/muc/images/4/4f/Karen.jpg/revision/latest/scale-to-width-down/248?cb=20200810021525"
+          image="https://www.clearwaycommunitysolar.com/wp-content/uploads/2019/05/iStock-177131518.jpg"
+          width="30px"
         />
-      </span>
+      </div>
     </nav>
   );
 }
